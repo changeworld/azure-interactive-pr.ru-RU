@@ -2,19 +2,19 @@
 title: включение файла
 description: включение файла
 services: functions
-author: tdykstra
+author: ggailey777
 manager: jeconnoc
 ms.service: multiple
 ms.topic: include
 ms.date: 06/21/2018
-ms.author: tdykstra
+ms.author: glenga
 ms.custom: include file
-ms.openlocfilehash: 7e51d3cd0533b4fb64d7dfa783af55266d536f54
-ms.sourcegitcommit: e721422a57e6deb95245135fd9f4f5677c344d93
+ms.openlocfilehash: f51b864cab14273c1e88dd85d22400e0e76ef770
+ms.sourcegitcommit: 81587470a181e314242c7a97cd0f91c82d4fe232
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "40079716"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47460010"
 ---
 На этом этапе приложение представляет собой коллекцию функций, которая позволяет отправлять и просматривать изображения. Из этого модуля вы узнаете, как с помощью API компьютерного зрения из Microsoft Cognitive Services создавать подписи для отправляемых изображений и сохранять эти подписи с метаданными изображения в Cosmos DB.
 
