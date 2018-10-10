@@ -2,19 +2,19 @@
 title: включение файла
 description: включение файла
 services: functions
-author: tdykstra
+author: ggailey777
 manager: jeconnoc
 ms.service: multiple
 ms.topic: include
 ms.date: 06/21/2018
-ms.author: tdykstra
+ms.author: glenga
 ms.custom: include file
-ms.openlocfilehash: 2202cdebe77668972372983a0e802d00edabf6dd
-ms.sourcegitcommit: e721422a57e6deb95245135fd9f4f5677c344d93
+ms.openlocfilehash: 194a25dbf9abda80379aa5aab408ac4ffe9ab7f5
+ms.sourcegitcommit: 81587470a181e314242c7a97cd0f91c82d4fe232
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "40079688"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47460064"
 ---
 Azure Cosmos DB — это глобально распределенная бессерверная многомодельная база данных Майкрософт. Из этого модуля вы узнаете, как с помощью службы "Функции Azure" сохранять и извлекать метаданные изображений в виде документов JSON в Cosmos DB.
 

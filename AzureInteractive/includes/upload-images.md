@@ -2,19 +2,19 @@
 title: включение файла
 description: включение файла
 services: functions
-author: tdykstra
+author: ggailey777
 manager: jeconnoc
 ms.service: multiple
 ms.topic: include
 ms.date: 06/21/2018
-ms.author: tdykstra
+ms.author: glenga
 ms.custom: include file
-ms.openlocfilehash: 56cfb4c2893977086309660f4f6941fd0d648913
-ms.sourcegitcommit: e721422a57e6deb95245135fd9f4f5677c344d93
+ms.openlocfilehash: 51c7d3e64424d499b473f3b138ce249a9cfd0182
+ms.sourcegitcommit: 81587470a181e314242c7a97cd0f91c82d4fe232
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "40079695"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47460095"
 ---
 Приложение, которое вы создаете, представляет собой галерею фотографий. В нем используется клиентский код JavaScript, чтобы вызывать API-интерфейсы для отправки и вывода изображений. В этом модуле вы создадите API с помощью бессерверной функции, которая генерирует временный URL-адрес для отправки изображения. Веб-приложение использует сгенерированный URL-адрес для отправки изображения в хранилище BLOB-объектов с помощью [REST API хранилища BLOB-объектов](https://docs.microsoft.com/rest/api/storageservices/blob-service-rest-api).
 
@@ -36,12 +36,21 @@ ms.locfileid: "40079695"
 
 Приложение-функция Azure — это контейнер для одной или нескольких бессерверных функций.
 
-1. Создайте приложение-функцию Azure с уникальным именем в группе ресурсов **first-serverless-app**, которую вы создали ранее. Для приложений-функций требуется учетная запись хранения. При работе с этим руководством используйте существующую учетную запись хранения.
+Создайте приложение-функцию Azure с уникальным именем в группе ресурсов **first-serverless-app**, которую вы создали ранее. Для приложений-функций требуется учетная запись хранения. При работе с этим руководством используйте существующую учетную запись хранения.
 
-    ```azurecli
-    az functionapp create -n <function app name> -g first-serverless-app -s <storage account name> -c westcentralus
-    ```
+```azurecli
+az functionapp create -n <function app name> -g first-serverless-app -s <storage account name> -c westcentralus
+```
 
+## <a name="configure-the-function-app"></a>Настройка приложения-функции
+
+Для приложения-функции, используемого в этом руководстве, требуется среда выполнения Функций версии 1.x. Задайте значение `~1` для параметра `FUNCTIONS_WORKER_RUNTIME`, чтобы закрепить приложение-функцию в последней версии 1.x. Задайте параметры приложения с помощью команды [az functionapp config appsettings set](https://docs.microsoft.com/cli/azure/functionapp/config/appsettings#set).
+
+В следующей команде Azure CLI замените <app_name> именем приложения-функции.
+
+```azurecli
+az functionapp config appsettings set --name <function app name> --g first-serverless-app --settings FUNCTIONS_WORKER_RUNTIME=~1
+```
 
 ## <a name="create-an-http-triggered-serverless-function"></a>Создание бессерверной функции, активируемой HTTP-запросом
 
