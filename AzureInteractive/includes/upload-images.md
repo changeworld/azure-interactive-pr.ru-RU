@@ -6,15 +6,15 @@ author: ggailey777
 manager: jeconnoc
 ms.service: multiple
 ms.topic: include
-ms.date: 06/21/2018
+ms.date: 10/12/2018
 ms.author: glenga
 ms.custom: include file
-ms.openlocfilehash: 51c7d3e64424d499b473f3b138ce249a9cfd0182
-ms.sourcegitcommit: 81587470a181e314242c7a97cd0f91c82d4fe232
+ms.openlocfilehash: 3779c2e130afa7ee8d5879f30a924e258b7a41e9
+ms.sourcegitcommit: fdb43556b8dcf67cb39c18e532b5fab7ac53eaee
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47460095"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49315982"
 ---
 Приложение, которое вы создаете, представляет собой галерею фотографий. В нем используется клиентский код JavaScript, чтобы вызывать API-интерфейсы для отправки и вывода изображений. В этом модуле вы создадите API с помощью бессерверной функции, которая генерирует временный URL-адрес для отправки изображения. Веб-приложение использует сгенерированный URL-адрес для отправки изображения в хранилище BLOB-объектов с помощью [REST API хранилища BLOB-объектов](https://docs.microsoft.com/rest/api/storageservices/blob-service-rest-api).
 
@@ -44,12 +44,12 @@ az functionapp create -n <function app name> -g first-serverless-app -s <storage
 
 ## <a name="configure-the-function-app"></a>Настройка приложения-функции
 
-Для приложения-функции, используемого в этом руководстве, требуется среда выполнения Функций версии 1.x. Задайте значение `~1` для параметра `FUNCTIONS_WORKER_RUNTIME`, чтобы закрепить приложение-функцию в последней версии 1.x. Задайте параметры приложения с помощью команды [az functionapp config appsettings set](https://docs.microsoft.com/cli/azure/functionapp/config/appsettings#set).
+Для приложения-функции, используемого в этом руководстве, требуется среда выполнения Функций версии 1.x. Задайте значение `~1` для параметра `FUNCTIONS_EXTENSION_VERSION`, чтобы закрепить приложение-функцию в последней версии 1.x. Задайте параметры приложения с помощью команды [az functionapp config appsettings set](https://docs.microsoft.com/cli/azure/functionapp/config/appsettings#set).
 
-В следующей команде Azure CLI замените <app_name> именем приложения-функции.
+В следующей команде Azure CLI <app_name> — это имя приложения-функции.
 
 ```azurecli
-az functionapp config appsettings set --name <function app name> --g first-serverless-app --settings FUNCTIONS_WORKER_RUNTIME=~1
+az functionapp config appsettings set --name <function app name> --g first-serverless-app --settings FUNCTIONS_EXTENSION_VERSION=~1
 ```
 
 ## <a name="create-an-http-triggered-serverless-function"></a>Создание бессерверной функции, активируемой HTTP-запросом
