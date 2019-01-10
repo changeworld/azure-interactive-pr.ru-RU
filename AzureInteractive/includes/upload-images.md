@@ -49,7 +49,7 @@ az functionapp create -n <function app name> -g first-serverless-app -s <storage
 В следующей команде Azure CLI <app_name> — это имя приложения-функции.
 
 ```azurecli
-az functionapp config appsettings set --name <function app name> --g first-serverless-app --settings FUNCTIONS_EXTENSION_VERSION=~1
+az functionapp config appsettings set --name <function app name> -g first-serverless-app --settings FUNCTIONS_EXTENSION_VERSION=~1
 ```
 
 ## <a name="create-an-http-triggered-serverless-function"></a>Создание бессерверной функции, активируемой HTTP-запросом
